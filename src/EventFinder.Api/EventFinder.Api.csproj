@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Ical.Net" />
+    <PackageReference Include="Serilog.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventFinder.Core\EventFinder.Core.csproj" />
+    <ProjectReference Include="..\EventFinder.Data\EventFinder.Data.csproj" />
+    <ProjectReference Include="..\EventFinder.Ingestion\EventFinder.Ingestion.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Shipped alongside the executable so Gazetteer.Load and SourceRegistry.Load
+         can resolve them relative to AppContext.BaseDirectory both in `dotnet run`
+         and in the published/Docker image, without depending on the process's
+         working directory. -->
+    <Content Include="..\..\data\places-de.csv" Link="data\places-de.csv" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\data\postal-de.csv" Link="data\postal-de.csv" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\sources.yaml" Link="sources.yaml" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

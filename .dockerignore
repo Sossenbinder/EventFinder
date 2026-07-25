@@ -1,0 +1,25 @@
+**/bin/
+**/obj/
+**/TestResults/
+**/*.user
+.git/
+.github/
+.vs/
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+tests/
+docs/
+specs/
+*.binlog
+*.db
+*.db-shm
+*.db-wal
+node_modules/
+web/node_modules/
+
+## Runtime state produced by `dotnet run` (working dir is the project dir)
+src/EventFinder.Api/data/
+web/dist/

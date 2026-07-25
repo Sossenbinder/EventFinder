@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" />
+    <PackageReference Include="Ical.Net" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="YamlDotNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventFinder.Core\EventFinder.Core.csproj" />
+    <ProjectReference Include="..\EventFinder.Data\EventFinder.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EventFinder.Core/EventFinder.Core.csproj" />
+    <Project Path="src/EventFinder.Data/EventFinder.Data.csproj" />
+    <Project Path="src/EventFinder.Ingestion/EventFinder.Ingestion.csproj" />
+    <Project Path="src/EventFinder.Api/EventFinder.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EventFinder.Tests/EventFinder.Tests.csproj" />
+  </Folder>
+</Solution>

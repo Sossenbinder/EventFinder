@@ -1,0 +1,17 @@
+services:
+  eventfinder:
+    build: .
+    image: eventfinder:local
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    ports:
+      - "8080:8080"
+    volumes:
+      # SQLite database and the conditional-fetch cache both live under
+      # /data (see EVENTFINDER__Database__Path and EVENTFINDER__Data__Directory
+      # in the Dockerfile), so one named volume covers both.
+      - eventfinder-data:/data
+
+volumes:
+  eventfinder-data:
