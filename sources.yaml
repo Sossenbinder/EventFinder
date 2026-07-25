@@ -346,3 +346,467 @@ sources:
     region: DE
     tags: [ai, education]
     enabled: true
+
+  # --- Second discovery sweep (2026-07-26) -------------------------------
+  # 16 towns x 34 keywords across meetup.com/find plus the regional
+  # meetup.com/cities pages; 212 candidates verified, non-tech results
+  # (language cafes, yoga, Toastmasters, hiking, marketing) dropped by hand.
+  - id: meetup-wpmeetup-stuttgart
+    org: WordPress Meetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wpmeetup-stuttgart/events/"
+    region: DE
+    tags: [wordpress, web, cms]
+    enabled: true
+  - id: meetup-spawnpoint
+    org: SpawnPoint Karlsruhe (Games-Hub)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/spawnpoint/events/"
+    region: DE
+    tags: [gamedev, games]
+    enabled: true
+  - id: meetup-cybersecurity-stuttgart
+    org: Cybersecurity Region Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/cybersecurity-stuttgart/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-automotive-security-research-group-stuttgart
+    org: Automotive Security Research Group Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Automotive-Security-Research-Group-Stuttgart/events/"
+    region: DE
+    tags: [security, automotive]
+    enabled: true
+  - id: meetup-scrum-user-group-karlsruhe
+    org: Scrum User Group Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/scrum-user-group-karlsruhe/events/"
+    region: DE
+    tags: [agile, practice]
+    enabled: true
+  - id: meetup-cyberlab
+    org: CyberLab Karlsruhe (Hightech-Gründerschmiede)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/CyberLab/events/"
+    region: DE
+    tags: [startup, hightech]
+    enabled: true
+  - id: meetup-meetup-group-lnhuxrro
+    org: Thoughtworks Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/meetup-group-LNHuxrrO/events/"
+    region: DE
+    tags: [software, craft]
+    enabled: true
+  - id: meetup-bitcoinkarlsruhe
+    org: Bitcoin Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/bitcoinkarlsruhe/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-lean-coffee-karlsruhe-frankfurt
+    org: Lean Coffee Karlsruhe / Frankfurt
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/lean-coffee-karlsruhe-frankfurt/events/"
+    region: DE
+    tags: [agile, practice]
+    enabled: true
+  - id: meetup-startuphub
+    org: Gründerstammtisch Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/startuphub/events/"
+    region: DE
+    tags: [startup]
+    enabled: true
+  - id: meetup-startup-stuttgart
+    org: Startup Stuttgart e.V.
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/startup-stuttgart/events/"
+    region: DE
+    tags: [startup]
+    enabled: true
+
+  # Verified reachable, parsing cleanly to zero upcoming events right now.
+  # Registered so they are picked up the moment they schedule again.
+  - id: meetup-big-data-developers-in-stuttgart
+    org: Data, Cloud and AI in Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Big-Data-Developers-in-Stuttgart/events/"
+    region: DE
+    tags: [data, cloud, ai]
+    enabled: true
+  - id: meetup-data-ai-stuttgart
+    org: Data & AI Meetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/data_ai_stuttgart/events/"
+    region: DE
+    tags: [data, ai]
+    enabled: true
+  - id: meetup-meetup-group-xskktoht
+    org: Data Analytics & AI Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/meetup-group-xskktoht/events/"
+    region: DE
+    tags: [data, ai]
+    enabled: true
+  - id: meetup-industrial-iot-stammtisch-stuttgart
+    org: Industrial IoT Stammtisch Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Industrial-IoT-Stammtisch-Stuttgart/events/"
+    region: DE
+    tags: [iot, industry40]
+    enabled: true
+  - id: meetup-industrial-blockchain-meetup-stuttgart
+    org: Industrial Blockchain Meetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Industrial-Blockchain-Meetup-Stuttgart/events/"
+    region: DE
+    tags: [blockchain, iot]
+    enabled: true
+  - id: meetup-innorupt-iot-blockchain-tokenisierung-stuttgart
+    org: innoRUPT Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/innoRUPT-IoT-Blockchain-Tokenisierung-Stuttgart/events/"
+    region: DE
+    tags: [iot, blockchain]
+    enabled: true
+  - id: meetup-blockchain-meetup
+    org: CryptoMonday / Blockchain Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Blockchain-meetup/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-php-user-group-stuttgart
+    org: PHP User Group Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/PHP-User-Group-Stuttgart/events/"
+    region: DE
+    tags: [php, web]
+    enabled: true
+  - id: meetup-stuttgart-game-developer-meetup
+    org: Game Developer Meetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Stuttgart-Game-Developer-Meetup/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-unreal-engine-megameetup-stuttgart
+    org: Unreal Engine Megameetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/unreal-engine-megameetup-stuttgart/events/"
+    region: DE
+    tags: [gamedev, unreal]
+    enabled: true
+  - id: meetup-stuttgart-it-security-meetup
+    org: IT-Security Stuttgart Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Stuttgart-IT-Security-Meetup/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-stuttgart-kubernetes-meetup
+    org: Stuttgart Kubernetes / Cloud Native Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgart-kubernetes-meetup/events/"
+    region: DE
+    tags: [kubernetes, cloudnative, devops]
+    enabled: true
+  - id: meetup-stuttgartjs
+    org: Stuttgart JavaScript Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgartjs/events/"
+    region: DE
+    tags: [javascript, frontend]
+    enabled: true
+  - id: meetup-web-dev-bbq-stuttgart
+    org: Web-Dev-BBQ Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/web-dev-bbq-stuttgart/events/"
+    region: DE
+    tags: [web, frontend]
+    enabled: true
+  - id: meetup-uxstuttgart
+    org: UX Design Meetup Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/uxstuttgart/events/"
+    region: DE
+    tags: [ux, design]
+    enabled: true
+  - id: meetup-mobile-maultaschen
+    org: Mobile Maultaschen Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/mobile-maultaschen/events/"
+    region: DE
+    tags: [mobile, android, ios]
+    enabled: true
+  - id: meetup-stuttgart-atlassian-community-events
+    org: Stuttgart Atlassian Community
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgart-atlassian-community-events/events/"
+    region: DE
+    tags: [tooling, practice]
+    enabled: true
+  - id: meetup-stuttgart-agile-coffee
+    org: 0711Agile / Agile in Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgart-agile-coffee/events/"
+    region: DE
+    tags: [agile, practice]
+    enabled: true
+  - id: meetup-stuttgart-digital
+    org: Stuttgart Digital
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgart-digital/events/"
+    region: DE
+    tags: [digital]
+    enabled: true
+  - id: meetup-devops-stuttgart
+    org: DevOps Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/devops-stuttgart/events/"
+    region: DE
+    tags: [devops]
+    enabled: true
+  - id: meetup-the-age-of-devops-sudwest
+    org: The Age of DevOps — Südwest
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/The-Age-of-DevOps-Sudwest/events/"
+    region: DE
+    tags: [devops]
+    enabled: true
+  - id: meetup-ai-agent-builders-stuttgart-by-dataiku
+    org: AI Agent Builders Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-agent-builders-stuttgart-by-dataiku/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-esslingen-automatisierung-mit-ki
+    org: AI Automation Lab Esslingen
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/esslingen-automatisierung-mit-ki/events/"
+    region: DE
+    tags: [ai, automation]
+    enabled: true
+  - id: meetup-ki-coffee-corner
+    org: KI Coffee Corner
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-coffee-corner/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-stuttgarter-ki-summit
+    org: KI Summit Stuttgart
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/stuttgarter-ki-summit/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-software-engineering-bookclub
+    org: Software Engineering Book Club
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/software-engineering-bookclub/events/"
+    region: DE
+    tags: [craft]
+    enabled: true
+  - id: meetup-microsoft-ai-user-group-germany
+    org: Microsoft AI User Group Germany
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/microsoft-ai-user-group-germany/events/"
+    region: DE
+    tags: [ai, microsoft]
+    enabled: true
+  - id: meetup-vksiev
+    org: Verein der Karlsruher Software-Ingenieure (VKSI)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/VKSIeV/events/"
+    region: DE
+    tags: [software, craft]
+    enabled: true
+  - id: meetup-karlsruhe-python-meetup
+    org: Karlsruhe Python Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Karlsruhe-Python-Meetup/events/"
+    region: DE
+    tags: [python]
+    enabled: true
+  - id: meetup-php-usergroup-karlsruhe
+    org: PHP Usergroup Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/php-usergroup-karlsruhe/events/"
+    region: DE
+    tags: [php, web]
+    enabled: true
+  - id: meetup-devops-karlsruhe
+    org: DevOps Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/devops-karlsruhe/events/"
+    region: DE
+    tags: [devops]
+    enabled: true
+  - id: meetup-data-science-karlsruhe
+    org: Data Science Meetup Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/data-science-karlsruhe/events/"
+    region: DE
+    tags: [data, datascience]
+    enabled: true
+  - id: meetup-datamonsters-karlsruhe
+    org: Microsoft Data Platform Community Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/datamonsters-karlsruhe/events/"
+    region: DE
+    tags: [data, microsoft]
+    enabled: true
+  - id: meetup-global-ai-karlsruhe
+    org: Global AI Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/global-ai-karlsruhe/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-cloud-innovation-karlsruhe
+    org: AI & Cloud Innovation Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-cloud-innovation-karlsruhe/events/"
+    region: DE
+    tags: [ai, cloud]
+    enabled: true
+  - id: meetup-golang-meetup-karlsruhe
+    org: Golang Meetup Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/golang-meetup-karlsruhe/events/"
+    region: DE
+    tags: [golang, systems]
+    enabled: true
+  - id: meetup-rust-hack-learn-karlsruhe
+    org: Rust Hack & Learn Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/rust-hack-learn-karlsruhe/events/"
+    region: DE
+    tags: [rust, systems]
+    enabled: true
+  - id: meetup-green-software-development-karlsruhe
+    org: Green Software Development Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/green-software-development-karlsruhe/events/"
+    region: DE
+    tags: [sustainability, craft]
+    enabled: true
+  - id: meetup-bitdevs-karlsruhe
+    org: BitDevs Karlsruhe
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/bitdevs-karlsruhe/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-ai-voice-assistenten-karlsruhe-muenchen
+    org: AI Voice Assistants Süddeutschland
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/AI-Voice-Assistenten-Karlsruhe-Muenchen/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-it-meetup-bruchsal
+    org: IT Meetup Bruchsal
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/it-meetup-bruchsal/events/"
+    region: DE
+    tags: [software]
+    enabled: true
+  - id: meetup-ulmer-data-science-stammtisch
+    org: Ulmer Data Science Stammtisch
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Ulmer-Data-Science-Stammtisch/events/"
+    region: DE
+    tags: [data, datascience]
+    enabled: true
+  - id: meetup-applied-ai-cloud-computing-ulm
+    org: Applied AI and Cloud Computing Ulm
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/applied-ai-cloud-computing-ulm/events/"
+    region: DE
+    tags: [ai, cloud]
+    enabled: true
+  - id: meetup-net-developer-group-ulm-oberschwaben
+    org: .NET Developer Group Ulm / Oberschwaben
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/net-developer-group-ulm-oberschwaben/events/"
+    region: DE
+    tags: [dotnet, csharp]
+    enabled: true
+  - id: meetup-scrumtisch-ulm
+    org: ScrumTisch Ulm
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ScrumTisch-Ulm/events/"
+    region: DE
+    tags: [agile, practice]
+    enabled: true
+  - id: meetup-bitcoin-ulm
+    org: Bitcoin Ulm
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Bitcoin-Ulm/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true

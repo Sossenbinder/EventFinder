@@ -58,7 +58,32 @@ plausible-looking URLs.
   fail soft. Group slugs were discovered once, by hand, from the `__NEXT_DATA__` of
   `meetup.com/find/?location=de--<city>&source=GROUPS&keywords=<kw>` and then verified individually —
   that discovery step is deliberately not shipped as a crawler.
-- **Rejected after inspection** (do not spend time re-checking): `events.shackspace.de` is a Vue SPA
+- **Meetup discovery, second sweep (2026-07-26).** 16 towns × 34 keywords over
+  `meetup.com/find/?location=de--<city>&source=GROUPS&keywords=<kw>` plus the regional
+  `meetup.com/cities/de/<city>/` pages, whose `pageProps.eventsInLocation` yields group slugs via
+  each event's `eventUrl`. The city list itself comes from Meetup's own sitemap
+  (`groups-index-sitemap.xml` → `sw_cities_1.xml.gz`, 332 German cities — note `/cities/us/de/` is
+  Delaware, not Germany). 212 candidates, all reachable, 69 with upcoming events.
+  **Find results cannot be paginated by URL**: the Apollo state exposes
+  `pageInfo.hasNextPage`/`endCursor`, but the cursor is only consumed by the SPA's own GraphQL call,
+  so each query returns at most 15 groups. Going wide on keyword × city is the workaround.
+  The sweep pulls in plenty of non-tech (yoga, language cafés, Toastmasters, hiking, marketing,
+  founder coaching) — selection is a human call, not something to automate.
+- **lu.ma — real ICS feeds, low regional yield.** Every lu.ma calendar exports iCalendar at
+  `https://api.lu.ma/ics/get?entity=calendar&id=<cal-api-id>` (no auth), and calendar ids are listed
+  in `pageProps.initialData.calendars` on a city page such as `lu.ma/stuttgart`. But that page
+  features *global* calendars, not local ones: the Google DeepMind calendar carried 164 events of
+  which only 8 were future and 4 German. Worth revisiting if the German lu.ma scene grows — the
+  `ics` adapter would consume these unchanged.
+- **pretalx — parked, no location data.** `https://pretalx.com/api/events/` returns 729 public
+  conferences (108 future, 24 with a German locale — Software-QS-Tag, Munich Embedded, IT-Summit …)
+  with `slug`, `name`, `date_from`, `date_to`, `timezone`. **Neither the API detail endpoint nor the
+  public conference page carries a city or venue**, so nothing here can be geocoded, and every entry
+  would land permanently in the unresolved bucket, invisible to radius search. Only worth adding if
+  location is inferred from the conference title.
+- **Rejected after inspection** (do not spend time re-checking): `bwcon.de`, `startupstuttgart.de`
+  and `codefor.de/stuttgart` publish no ICS and no schema.org `Event` markup — a bespoke HTML
+  adapter each; `cyberforum.de` returns 403 to a non-browser UA. `events.shackspace.de` is a Vue SPA
   whose routes all return the same 1 KB shell, with no discoverable API; `eintopf.info` has a working
   `/rss` feed but is a cultural/political events site for Stuttgart, not a tech source; `jugs.org`,
   `ccc.de` and `events.ccc.de` expose no ICS/iCal endpoint at any of the conventional paths.
