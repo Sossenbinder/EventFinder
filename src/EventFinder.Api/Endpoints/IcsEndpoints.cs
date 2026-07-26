@@ -12,16 +12,16 @@ public static class IcsEndpoints
     {
         app.MapGet("/api/events.ics", async (
             double lat, double lon, double radiusKm, DateTime? from, DateTime? to,
-            string[]? tags, string? attendance, EventStore store, CancellationToken ct,
+            string[]? tags, string? attendance, string? q, EventStore store, CancellationToken ct,
             int limit = 100, int offset = 0) =>
         {
-            if (!EventQueryParsing.TryParse(lat, lon, radiusKm, from, to, tags, attendance, limit, offset, out var query, out var problem))
+            if (!EventQueryParsing.TryParse(lat, lon, radiusKm, from, to, tags, attendance, q, limit, offset, out var query, out var problem))
             {
                 return problem!;
             }
 
             var events = await store.QueryAsync(
-                query.Lat, query.Lon, query.RadiusKm, query.From, query.To, query.Tags, query.Attendance, ct);
+                query.Lat, query.Lon, query.RadiusKm, query.From, query.To, query.Tags, query.Attendance, query.Search, ct);
             var ordered = events.OrderBy(e => e.StartUtc).Skip(query.Offset).Take(query.Limit).ToList();
 
             var calendarName = string.Create(

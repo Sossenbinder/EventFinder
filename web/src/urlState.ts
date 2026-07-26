@@ -26,6 +26,7 @@ export const DEFAULT_FILTERS: Filters = {
   to: null,
   tags: [],
   attendance: null,
+  search: '',
 }
 
 // All filters (and the active tab) live in the URL query string so a search
@@ -52,6 +53,7 @@ export function parseStateFromUrl(search: string): { filters: Filters; view: Vie
     to: params.get('to'),
     tags: params.get('tags')?.split(',').filter(Boolean) ?? [],
     attendance: attendanceParam && isAttendance(attendanceParam) ? attendanceParam : null,
+    search: params.get('q') ?? '',
   }
 
   return {
@@ -70,6 +72,7 @@ export function stateToUrl(filters: Filters, view: View): string {
   if (filters.to) params.set('to', filters.to)
   if (filters.tags.length > 0) params.set('tags', filters.tags.join(','))
   if (filters.attendance) params.set('attendance', filters.attendance)
+  if (filters.search.trim()) params.set('q', filters.search.trim())
   if (view === 'sources') params.set('view', view)
   return `${window.location.pathname}?${params.toString()}`
 }

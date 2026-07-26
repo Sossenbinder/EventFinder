@@ -33,6 +33,17 @@ export default function FilterPanel({ filters, onChange }: Props) {
 
   return (
     <div className="filter-panel">
+      <div className="filter-row filter-row-search">
+        <label htmlFor="search">Suche</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Titel, Ort, Veranstalter…"
+          value={filters.search}
+          onChange={(e) => onChange({ search: e.target.value })}
+        />
+      </div>
+
       <div className="filter-row">
         <label htmlFor="radius">
           Umkreis: <strong>{filters.radiusKm} km</strong>

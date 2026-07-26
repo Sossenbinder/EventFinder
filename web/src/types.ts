@@ -74,4 +74,5 @@ export interface Filters {
   to: string | null // yyyy-MM-dd
   tags: string[]
   attendance: Attendance | null
+  search: string
 }

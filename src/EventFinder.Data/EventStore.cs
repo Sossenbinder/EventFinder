@@ -85,6 +85,7 @@ public sealed class EventStore(EventFinderDbContext db)
         DateTime? to,
         IReadOnlyCollection<string>? tags,
         Attendance? attendance,
+        string? search,
         CancellationToken ct)
     {
         var box = Geo.GetBoundingBox(lat, lon, radiusKm);
@@ -114,6 +115,25 @@ public sealed class EventStore(EventFinderDbContext db)
         if (tags is { Count: > 0 })
         {
             candidates = [.. candidates.Where(e => e.Tags.Any(tags.Contains))];
+        }
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            // Folded in memory rather than matched in SQL: SQLite's LIKE is
+            // ASCII-only for case folding, so "muenchen" would not find
+            // "München". Normalization.Fold is the same umlaut-expanding
+            // comparison the gazetteer and tag extraction already use, and the
+            // candidate set here is a single radius' worth of events.
+            var needle = Normalization.Fold(search);
+            candidates =
+            [
+                .. candidates.Where(e =>
+                    Normalization.Fold(e.Title).Contains(needle, StringComparison.Ordinal)
+                    || Normalization.Fold(e.Description ?? string.Empty).Contains(needle, StringComparison.Ordinal)
+                    || Normalization.Fold(e.VenueName ?? string.Empty).Contains(needle, StringComparison.Ordinal)
+                    || Normalization.Fold(e.City ?? string.Empty).Contains(needle, StringComparison.Ordinal)
+                    || e.Tags.Any(t => Normalization.Fold(t).Contains(needle, StringComparison.Ordinal))),
+            ];
         }
 
         return [.. candidates.Where(e => Geo.DistanceKm(lat, lon, e.Latitude!.Value, e.Longitude!.Value) <= radiusKm)];

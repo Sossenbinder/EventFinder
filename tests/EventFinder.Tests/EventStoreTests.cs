@@ -83,10 +83,44 @@ public sealed class EventStoreTests : IDisposable
             CancellationToken.None);
 
         var results = await store.QueryAsync(
-            KirchheimLat, KirchheimLon, radiusKm: 30, from: null, to: null, tags: null, attendance: null,
+            KirchheimLat, KirchheimLon, radiusKm: 30, from: null, to: null, tags: null, attendance: null, search: null,
             CancellationToken.None);
 
         results.Should().ContainSingle(e => e.SourceEventId == "near");
+    }
+
+    [Theory]
+    [InlineData("kubernetes", "kube")]      // plain substring of the title
+    [InlineData("KUBERNETES", "kube")]      // case-insensitive
+    [InlineData("muenchen", "umlaut")]      // folded: matches a "München" city
+    [InlineData("München", "umlaut")]
+    [InlineData("segeln", null)]            // no match at all
+    public async Task QueryAsync_Search_MatchesFoldedTitleAndCity(string search, string? expectedId)
+    {
+        await using var ctx = new EventFinderDbContext(_options);
+        var store = new EventStore(ctx);
+        var start = new DateTime(2026, 9, 10, 18, 0, 0, DateTimeKind.Utc);
+
+        await store.UpsertAsync(
+            [
+                MakeEvent("kube", "Kubernetes Meetup", start, StuttgartLat, StuttgartLon, "Stuttgart"),
+                MakeEvent("umlaut", "Ein Vortrag", start, StuttgartLat, StuttgartLon, "München"),
+            ],
+            "gdg-stuttgart",
+            CancellationToken.None);
+
+        var results = await store.QueryAsync(
+            KirchheimLat, KirchheimLon, radiusKm: 30, from: null, to: null, tags: null, attendance: null,
+            search: search, CancellationToken.None);
+
+        if (expectedId is null)
+        {
+            results.Should().BeEmpty();
+        }
+        else
+        {
+            results.Should().ContainSingle(e => e.SourceEventId == expectedId);
+        }
     }
 
     [Fact]
@@ -103,7 +137,7 @@ public sealed class EventStoreTests : IDisposable
         await store.UpsertAsync([unresolved], "gdg-stuttgart", CancellationToken.None);
 
         var results = await store.QueryAsync(
-            KirchheimLat, KirchheimLon, radiusKm: 1000, from: null, to: null, tags: null, attendance: null,
+            KirchheimLat, KirchheimLon, radiusKm: 1000, from: null, to: null, tags: null, attendance: null, search: null,
             CancellationToken.None);
 
         results.Should().BeEmpty();

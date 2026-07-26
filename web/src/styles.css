@@ -185,6 +185,10 @@ select {
   width: 160px;
 }
 
+.filter-row-search input {
+  width: 220px;
+}
+
 .tag-input input {
   width: 160px;
 }

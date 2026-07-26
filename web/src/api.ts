@@ -39,6 +39,7 @@ export function buildEventQueryParams(filters: Filters, extra?: { limit?: number
   if (filters.to) params.set('to', filters.to)
   for (const tag of filters.tags) params.append('tags', tag)
   if (filters.attendance) params.set('attendance', filters.attendance)
+  if (filters.search.trim()) params.set('q', filters.search.trim())
   if (extra?.limit !== undefined) params.set('limit', String(extra.limit))
   if (extra?.offset !== undefined) params.set('offset', String(extra.offset))
   return params

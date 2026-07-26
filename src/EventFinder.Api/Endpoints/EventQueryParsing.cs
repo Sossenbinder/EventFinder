@@ -13,6 +13,7 @@ public sealed record EventQuery(
     DateTime? To,
     IReadOnlyCollection<string> Tags,
     Attendance? Attendance,
+    string? Search,
     int Limit,
     int Offset);
 
@@ -29,6 +30,7 @@ public static class EventQueryParsing
         DateTime? to,
         string[]? tags,
         string? attendance,
+        string? search,
         int limit,
         int offset,
         out EventQuery query,
@@ -92,6 +94,7 @@ public static class EventQueryParsing
             to is null ? null : DateTime.SpecifyKind(to.Value, DateTimeKind.Utc),
             tags ?? [],
             parsedAttendance,
+            string.IsNullOrWhiteSpace(search) ? null : search.Trim(),
             limit,
             offset);
         problem = null;
