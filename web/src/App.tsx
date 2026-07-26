@@ -140,17 +140,29 @@ export default function App() {
             onSelect={setSelectedId}
             onHover={setHoveredId}
           />
-          <EventList
-            events={events}
-            totalCount={totalCount}
-            loading={eventsLoading}
-            error={eventsError}
-            onRetry={() => setEventsReloadToken((t) => t + 1)}
-            sourceOrgOf={sourceOrgOf}
-            selectedId={selectedId}
-            onSelect={setSelectedId}
-            onHover={setHoveredId}
-          />
+          <div className="results-pane">
+            <div className="results-search">
+              <input
+                id="search"
+                type="search"
+                placeholder="Veranstaltungen durchsuchen…"
+                aria-label="Veranstaltungen durchsuchen"
+                value={filters.search}
+                onChange={(e) => patchFilters({ search: e.target.value })}
+              />
+            </div>
+            <EventList
+              events={events}
+              totalCount={totalCount}
+              loading={eventsLoading}
+              error={eventsError}
+              onRetry={() => setEventsReloadToken((t) => t + 1)}
+              sourceOrgOf={sourceOrgOf}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+              onHover={setHoveredId}
+            />
+          </div>
         </div>
       )}
 
