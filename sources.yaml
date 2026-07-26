@@ -46,6 +46,11 @@ sources:
       - gdg-on-campus-constructor-university-bremen-germany
       - gdg-on-campus-frankfurt-school-of-finance-management-frankfurt-germany
       - gdg-on-campus-goethe-university-frankfurt-germany
+      - gdg-on-campus-srh-berlin-university-of-applied-sciences-berlin-germany
+      - gdg-on-campus-university-of-duisburg-essen-essen-germany
+      - gdg-on-campus-university-of-passau-passau-germany
+      - gdg-paderborn
+      - gdg-rhein-main
 
   # --- Meetup groups, Stuttgart region ------------------------------------
   # Curated per-group pages only, never platform-wide crawling. Each group's
@@ -108,7 +113,7 @@ sources:
     tags: [data, analytics]
     enabled: true
   - id: meetup-backnang-data-science
-    org: Data Science & Software Craft Backnang
+    org: "Data Science & Software Craft Backnang"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/backnang-data-science/events/"
@@ -156,7 +161,7 @@ sources:
     tags: [ai, ibm]
     enabled: true
   - id: meetup-pforzheim-software
-    org: Software, Technology & Design Meetup Pforzheim
+    org: "Software, Technology & Design Meetup Pforzheim"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/Software-Technology-Meetup-Pforzheim/events/"
@@ -299,7 +304,7 @@ sources:
     tags: [cloud, stackit]
     enabled: true
   - id: meetup-techtalk-stuttgart
-    org: tech&talk Stuttgart
+    org: "tech&talk Stuttgart"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/tech-talk-stuttgart/events/"
@@ -307,7 +312,7 @@ sources:
     tags: [software, craft]
     enabled: true
   - id: meetup-techtalk-karlsruhe
-    org: tech&talk Karlsruhe
+    org: "tech&talk Karlsruhe"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/tech-talk-karlsruhe/events/"
@@ -451,7 +456,7 @@ sources:
     tags: [data, cloud, ai]
     enabled: true
   - id: meetup-data-ai-stuttgart
-    org: Data & AI Meetup Stuttgart
+    org: "Data & AI Meetup Stuttgart"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/data_ai_stuttgart/events/"
@@ -459,7 +464,7 @@ sources:
     tags: [data, ai]
     enabled: true
   - id: meetup-meetup-group-xskktoht
-    org: Data Analytics & AI Stuttgart
+    org: "Data Analytics & AI Stuttgart"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/meetup-group-xskktoht/events/"
@@ -715,7 +720,7 @@ sources:
     tags: [ai]
     enabled: true
   - id: meetup-ai-cloud-innovation-karlsruhe
-    org: AI & Cloud Innovation Karlsruhe
+    org: "AI & Cloud Innovation Karlsruhe"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/ai-cloud-innovation-karlsruhe/events/"
@@ -731,7 +736,7 @@ sources:
     tags: [golang, systems]
     enabled: true
   - id: meetup-rust-hack-learn-karlsruhe
-    org: Rust Hack & Learn Karlsruhe
+    org: "Rust Hack & Learn Karlsruhe"
     type: html
     adapter: meetup-group
     url: "https://www.meetup.com/rust-hack-learn-karlsruhe/events/"
@@ -809,4 +814,1313 @@ sources:
     url: "https://www.meetup.com/Bitcoin-Ulm/events/"
     region: DE
     tags: [blockchain]
+    enabled: true
+
+  # --- National sweep (2026-07-26) ----------------------------------------
+  # 50 cities x 21 keywords: the first two sweeps only covered towns near
+  # Kirchheim, which left Hamburg, Koeln and Leipzig at zero coverage.
+  # 1,533 candidates verified; Luxembourg groups and training vendors dropped.
+  - id: meetup-godot-user-group-berlin
+    org: Godot User Group Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/godot-user-group-berlin/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-hamburg-agentic-ai
+    org: Hamburg Agentic AI
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/hamburg-agentic-ai/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-leipzig-python-user-group
+    org: Leipzig Python User Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Leipzig-Python-User-Group/events/"
+    region: DE
+    tags: [python]
+    enabled: true
+  - id: meetup-betreute-intelligenz
+    org: KI-Community Betreute Intelligenz
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/betreute-intelligenz/events/"
+    region: DE
+    tags: [ai, gamedev]
+    enabled: true
+  - id: meetup-code-for-munster
+    org: Code For Münster
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/code-for-munster/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-bitcoin-stammtisch-das-original
+    org: "Hamburg's Bitcoin-Stammtisch: Das Original⚡₿"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/bitcoin-stammtisch-das-original/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-bitcoin-stammtisch-halle-saale
+    org: Bitcoin Stammtisch Halle Saale
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/bitcoin-stammtisch-halle-saale/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-creativecodeberlin
+    org: Creative Code Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/creativecodeberlin/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-dresdenjs-io-javascript-user-group
+    org: DresdenJS.io JavaScript User Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/dresdenjs-io-javascript-user-group/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-emerging-tech-rhein-main-community
+    org: Emerging Tech Community
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/emerging-tech-rhein-main-community/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-gamedevmuc
+    org: GAME/DEV/MUC (formerly Munich Indie)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/gamedevmuc/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-java-user-group-hannover
+    org: Java User Group Hannover
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/java-user-group-hannover/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-jug-bb
+    org: Java Usergroup Berlin-Brandenburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/jug-bb/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-kubernetes-meetup-bielefeld
+    org: Kubernetes Meetup Bielefeld
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/kubernetes-meetup-bielefeld/events/"
+    region: DE
+    tags: [kubernetes]
+    enabled: true
+  - id: meetup-opentechschool-leipzig
+    org: Open Tech Meetup Leipzig
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/opentechschool-leipzig/events/"
+    region: DE
+    tags: [opensource]
+    enabled: true
+  - id: meetup-ibm-developers
+    org: IBM Developer
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ibm-developers/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-big-data-developers-in-berlin
+    org: Data, Cloud and AI in Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/big-data-developers-in-berlin/events/"
+    region: DE
+    tags: [cloud, ai]
+    enabled: true
+  - id: meetup-hannover-python-meetup
+    org: Hannover Python Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/hannover-python-meetup/events/"
+    region: DE
+    tags: [python]
+    enabled: true
+  - id: meetup-ki-mbiss-ki-zum-mitehmen
+    org: "KI:MBISS - KI zum Mitnehmen | Networking, KI und Pommes"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-mbiss-ki-zum-mitehmen/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-cologne-js
+    org: Cologne.js
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/cologne-js/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-aachen-maker-meetup
+    org: Aachen Maker Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Aachen-Maker-Meetup/events/"
+    region: DE
+    tags: [hardware]
+    enabled: true
+  - id: meetup-azure-serverless-koln
+    org: Azure Cloud Native - Köln
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/azure-serverless-koln/events/"
+    region: DE
+    tags: [kubernetes, cloud, dotnet]
+    enabled: true
+  - id: meetup-cologne-ai-and-machine-learning-meetup
+    org: Cologne AI and Machine Learning Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/cologne-ai-and-machine-learning-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-nurnberg-wordpress-meetup
+    org: WordPress Meetup Nürnberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/nurnberg-wordpress-meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-paderborn-js
+    org: Paderborn.JS - JavaScript, Web und Cloud Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/paderborn-js/events/"
+    region: DE
+    tags: [cloud, frontend]
+    enabled: true
+  - id: meetup-rust-modern-systems-programming-in-leipzig
+    org: Rust - Modern Systems Programming in Leipzig
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/rust-modern-systems-programming-in-leipzig/events/"
+    region: DE
+    tags: [systems]
+    enabled: true
+  - id: meetup-leipzig-wordpress-meetup
+    org: WordPress Meetup Leipzig
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Leipzig-WordPress-Meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-ai-nights-nurnberg
+    org: "AI Nights | Nürnberg"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-nights-nurnberg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-build-learn-data-science-saturdays
+    org: "✨Build & Learn: AI with Coffee☕  ✨"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/build-learn-data-science-saturdays/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-experience-design-community
+    org: "UX & Design Community Mannheim"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/experience-design-community/events/"
+    region: DE
+    tags: [gamedev, design]
+    enabled: true
+  - id: meetup-frontend-meetup-freiburg
+    org: Frontend Meetup Freiburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/frontend-meetup-freiburg/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-owasp-ruhrpott-chapter
+    org: OWASP Ruhrpott Chapter
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/owasp-ruhrpott-chapter/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-phpughh
+    org: PHP-Usergroup Hamburg (PHPUGHH)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/phpughh/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-agentic-software-engineering-meetup-paderborn
+    org: Agentic Software Engineering Meetup Paderborn
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/agentic-software-engineering-meetup-paderborn/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-graphdb-dach
+    org: Graph Database - DACH (Germany, Austria, Switzerland )
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/graphdb-dach/events/"
+    region: DE
+    tags: [data]
+    enabled: true
+  - id: meetup-php-usergroup-dresden
+    org: PHP USERGROUP DRESDEN e.V.
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/php-usergroup-dresden/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-phpug-rhein-neckar
+    org: PHP User Group Metropolregion Rhein-Neckar
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/phpug-rhein-neckar/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-agile-usergroup-frankfurtrheinmain
+    org: Agile Usergroup FrankfurtRheinMain
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Agile-Usergroup-FrankfurtRheinMain/events/"
+    region: DE
+    tags: [practice]
+    enabled: true
+  - id: meetup-analytics-pioneers-dusseldorf
+    org: Analytics Pioneers Düsseldorf
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Analytics-Pioneers-Dusseldorf/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-wurzburg
+    org: Analytics Pioneers Würzburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Analytics-Pioneers-Wurzburg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-big-data-developers-in-munich
+    org: Data, Cloud and AI in Munich
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Big-Data-Developers-in-Munich/events/"
+    region: DE
+    tags: [cloud, ai]
+    enabled: true
+  - id: meetup-ibm-powerai-dusseldorf
+    org: "The Journey to AI (Artificial Intelligence) @ Düsseldorf"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/IBM-PowerAI-Dusseldorf/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ibmpoweraifrankfurt
+    org: "The Journey to AI (Artificial Intelligence) @ Frankfurt"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/IBMPowerAIFrankfurt/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ibmpoweraihamburg
+    org: "The Journey to AI (Artificial Intelligence) @ Hamburg"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/IBMPowerAIHamburg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ibmpoweraimunich
+    org: "The Journey to AI (Artificial Intelligence) @ Munich"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/IBMPowerAIMunich/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-agentic-ai-frankfurt
+    org: Agentic AI Community Frankfurt
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/agentic-ai-frankfurt/events/"
+    region: DE
+    tags: [ai, gamedev]
+    enabled: true
+  - id: meetup-ai-school-leipzig
+    org: AI School Leipzig - KI gemeinsam lernen
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-school-leipzig/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-hamburg
+    org: Analytics Pioneers Hamburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/analytics-pioneers-hamburg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-hannover
+    org: Analytics Pioneers Hannover
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/analytics-pioneers-hannover/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-cloud-infra-cologne-meetup
+    org: Cloud Infra Cologne - Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/cloud-infra-cologne-meetup/events/"
+    region: DE
+    tags: [cloud]
+    enabled: true
+  - id: meetup-devops-freiburg
+    org: DevOps Meetup Freiburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/devops-freiburg/events/"
+    region: DE
+    tags: [devops]
+    enabled: true
+  - id: meetup-erfurt-wordpress-meetup
+    org: WordPress Meetup Erfurt
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/erfurt-wordpress-meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-it-security-meetup-munster
+    org: IT-Security Meetup Münster
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/it-security-meetup-munster/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-learnandbuildtech
+    org: "Learn & Build Tech Community"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/learnandbuildtech/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-leipzig-golang
+    org: Leipzig Golang Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/leipzig-golang/events/"
+    region: DE
+    tags: [systems]
+    enabled: true
+  - id: meetup-meetup-group-pfvxoaqr
+    org: Agile Monday Rhein-Neckar
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/meetup-group-pfvxoaqr/events/"
+    region: DE
+    tags: [practice]
+    enabled: true
+  - id: meetup-owasp-hamburg-stammtisch
+    org: OWASP Hamburg Meeting
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/owasp-hamburg-stammtisch/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-safe-ai-germany-saige-frankfurt
+    org: Frankfurt AI Safety
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/safe-ai-germany-saige-frankfurt/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-augsburg
+    org: Analytics Pioneers Augsburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Analytics-Pioneers-Augsburg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-dresden
+    org: Analytics Pioneers Dresden
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Analytics-Pioneers-Dresden/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-leipzig
+    org: Analytics Pioneers Leipzig
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Analytics-Pioneers-Leipzig/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-azure-dusseldorf-meetup
+    org: Azure Düsseldorf Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Azure-Dusseldorf-Meetup/events/"
+    region: DE
+    tags: [cloud, dotnet]
+    enabled: true
+  - id: meetup-azure-meetup-leipzig
+    org: Azure Meetup Leipzig
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Azure-Meetup-Leipzig/events/"
+    region: DE
+    tags: [cloud, dotnet]
+    enabled: true
+  - id: meetup-azure-meetup-magdeburg
+    org: Azure Meetup Magdeburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Azure-Meetup-Magdeburg/events/"
+    region: DE
+    tags: [cloud, dotnet]
+    enabled: true
+  - id: meetup-hamburg-unity-meetup
+    org: Hamburg Unity Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Hamburg-Unity-Meetup/events/"
+    region: DE
+    tags: [gamedev]
+    enabled: true
+  - id: meetup-it-security-kassel
+    org: IT-Security-Meetup Kassel
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/IT-Security-Kassel/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-java-user-group-munchen-jugm
+    org: Java User Group München (JUGM)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Java-User-Group-Munchen-JUGM/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-kasselcodemeetup
+    org: Kassel Code Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/KasselCodeMeetup/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-microsoft-data-ai-berlin
+    org: "Microsoft Data & AI Berlin"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Microsoft-Data-AI-Berlin/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-aachen-agentic-engineering
+    org: "Aachen Agentic Engineering (ex ML & Python)"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/aachen-agentic-engineering/events/"
+    region: DE
+    tags: [ai, python]
+    enabled: true
+  - id: meetup-agentic-coding-nurnberg
+    org: Agentic Coding Nürnberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/agentic-coding-nurnberg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-agile-leipzig
+    org: Agile Meetup (Leipzig)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/agile-leipzig/events/"
+    region: DE
+    tags: [practice]
+    enabled: true
+  - id: meetup-ai-agenten-frankfurt
+    org: AI Agenten Frankfurt - Practical AI for Everyday Life
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-agenten-frankfurt/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-impact-walk-talk
+    org: "AI Impact Walk&Talk - A different kind of AI Meetup"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-impact-walk-talk/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-nights-munchen
+    org: "AI Nights | München"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-nights-munchen/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-prompt-engineering-munich
+    org: "AI & Prompt Engineering Munich"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-prompt-engineering-munich/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-bremen
+    org: Analytics Pioneers Bremen
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/analytics-pioneers-bremen/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-nuernberg
+    org: Analytics Pioneers Nürnberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/analytics-pioneers-nuernberg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-analytics-pioneers-potsdam
+    org: Analytics Pioneers Potsdam
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/analytics-pioneers-potsdam/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-audio-developer-meetup-berlin
+    org: Audio Developer Meetup Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/audio-developer-meetup-berlin/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-aws-leipzig
+    org: Leipzig AWS User Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/aws-leipzig/events/"
+    region: DE
+    tags: [cloud]
+    enabled: true
+  - id: meetup-aws-user-group-saarland
+    org: AWS User Group Saarbrücken
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/aws-user-group-saarland/events/"
+    region: DE
+    tags: [cloud]
+    enabled: true
+  - id: meetup-awsughh
+    org: Hamburg AWS User Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/awsugHH/events/"
+    region: DE
+    tags: [cloud]
+    enabled: true
+  - id: meetup-berlin-workshop-crea-tu-sitio-web-con-ia-100-funcional
+    org: "Berlin Workshop: Crea tu sitio web con IA 100% funcional"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/berlin-workshop-crea-tu-sitio-web-con-ia-100-funcional/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-bitcoin-munich
+    org: Bitcoin Munich
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/bitcoin-munich/events/"
+    region: DE
+    tags: [blockchain]
+    enabled: true
+  - id: meetup-cloud-foundation-community
+    org: Cloud Foundation Community
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/cloud-foundation-community/events/"
+    region: DE
+    tags: [cloud, gamedev]
+    enabled: true
+  - id: meetup-code-review
+    org: Code Review Frankfurt
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/code-review/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-codecentric-dortmund-tech-talk
+    org: "tech & talk in Dortmund"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/codecentric-dortmund-tech-talk/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-data-ai-in-the-lakehouse-meetup-nuremberg
+    org: "Data, Analytics & AI in the Lakehouse (Meetup Nuremberg)"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/data-ai-in-the-lakehouse-meetup-nuremberg/events/"
+    region: DE
+    tags: [cloud, ai]
+    enabled: true
+  - id: meetup-devops-nuernberg
+    org: DevOps Nürnberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/devops-nuernberg/events/"
+    region: DE
+    tags: [devops]
+    enabled: true
+  - id: meetup-dos-artificial-intelligence-applications-meetup-group
+    org: "AI Applications & Software Engineering Meetup Group"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/dos-artificial-intelligence-applications-meetup-group/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-dusseldorf-wordpress-meetup
+    org: Düsseldorf WordPress Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/dusseldorf-wordpress-meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-gdg-berlin
+    org: Google Developer Group Berlin (GDG Berlin)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/gdg-berlin/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-green-software-hamburg
+    org: Green Software Hamburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/green-software-hamburg/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-hagen-open-source-intelligence-meetup-group
+    org: "Betreute Intelligenz: KI in der praktischen Anwendung"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/hagen-open-source-intelligence-meetup-group/events/"
+    region: DE
+    tags: [ai, opensource]
+    enabled: true
+  - id: meetup-hamburg-kubernetes-meetup
+    org: Hamburg Kubernetes/Cloud Native Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/hamburg-kubernetes-meetup/events/"
+    region: DE
+    tags: [kubernetes, cloud]
+    enabled: true
+  - id: meetup-hamburg-wordpress-meetup
+    org: Hamburg WordPress Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/hamburg-wordpress-meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-it-agile-community-events
+    org: it-agile Community Events
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/it-agile-community-events/events/"
+    region: DE
+    tags: [gamedev, practice]
+    enabled: true
+  - id: meetup-java-usergroup-munster
+    org: Java Usergroup Münster
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/java-usergroup-munster/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-jug-hamburg
+    org: Java User Group Hamburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/jug-hamburg/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-kassel-data-science-meetup
+    org: Kassel AI und Data Science Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/kassel-data-science-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ki-klub-werder-havel
+    org: KI Klub Werder (Havel)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-klub-werder-havel/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ki-meetup-paderborn
+    org: KI-Meetup Paderborn
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-meetup-paderborn/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ki-praxisstammtisch-augsburg
+    org: KI in Unternehmensprozessen – Praxisstammtisch Augsburg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-praxisstammtisch-augsburg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ki-stammtisch-in
+    org: KI Stammtisch Ingolstadt
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ki-stammtisch-in/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-laravel-meetup-germany
+    org: Laravel Meetup Germany
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/laravel-meetup-germany/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-microsoft-cloud-thueringen
+    org: "Microsoft Cloud & AI Meetup Thüringen"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/microsoft-cloud-thueringen/events/"
+    region: DE
+    tags: [cloud, ai]
+    enabled: true
+  - id: meetup-monchengladbach-oss-virtualization-gathering
+    org: Open Source Virtualization Gathering Mönchengladbach
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/monchengladbach-oss-virtualization-gathering/events/"
+    region: DE
+    tags: [opensource]
+    enabled: true
+  - id: meetup-ms-cloud-collaboration-community-hannover-msccch
+    org: MS Cloud and Collaboration Community Hannover MSCCCH
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ms-cloud-collaboration-community-hannover-msccch/events/"
+    region: DE
+    tags: [cloud, gamedev]
+    enabled: true
+  - id: meetup-munchen-drupal-user-group-meetup
+    org: München Drupal User Group Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/munchen-drupal-user-group-meetup/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-munchen-kubernetes-meetup
+    org: "Kubernetes, Cloud Native & Platform Engineering Meetup"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/munchen-kubernetes-meetup/events/"
+    region: DE
+    tags: [kubernetes, cloud]
+    enabled: true
+  - id: meetup-munich-rubyshift-ruby-user-group
+    org: Munich Rubyshift, Ruby User Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/munich-rubyshift-ruby-user-group/events/"
+    region: DE
+    tags: [ruby]
+    enabled: true
+  - id: meetup-node-js-meetup-berlin
+    org: Node.js Meetup Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/node-js-meetup-berlin/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-osnabruck-data-and-ai-meetup
+    org: Osnabrück Data and AI Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/osnabruck-data-and-ai-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-pass-microsoft-data-platform-usergroup-rheinland
+    org: Data Platform Usergroup Rheinland
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/pass-microsoft-data-platform-usergroup-rheinland/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-pass-usergroup-rhein-main
+    org: Datamonster.io  Microsoft Data Platform Usergroup Rhein-Main
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/pass-usergroup-rhein-main/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-power-platform-ug-cologne
+    org: "Power Platform & Fabric User Group Cologne"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/power-platform-ug-cologne/events/"
+    region: DE
+    tags: [cloud]
+    enabled: true
+  - id: meetup-python-users-berlin-pub
+    org: Python Users Berlin (PUB)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/python-users-berlin-pub/events/"
+    region: DE
+    tags: [python]
+    enabled: true
+  - id: meetup-react-berlin-meetup
+    org: React Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/react-berlin-meetup/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-robot-framework-usergroup-munsterland
+    org: Robot Framework - Usergroup Münsterland - RBT FRW MSL
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/robot-framework-usergroup-munsterland/events/"
+    region: DE
+    tags: [hardware, testing]
+    enabled: true
+  - id: meetup-softwerkskammer-nuernberg
+    org: Softwerkskammer Nürnberg - Software Craft Community
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/softwerkskammer-nuernberg/events/"
+    region: DE
+    tags: [gamedev, practice]
+    enabled: true
+  - id: meetup-tech-n-talk-frankfurt
+    org: "tech&talk Frankfurt"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/tech-n-talk-frankfurt/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-typescript-berlin
+    org: TypeScript Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/typescript-berlin/events/"
+    region: DE
+    tags: [frontend]
+    enabled: true
+  - id: meetup-wordpress-meetup-bonn-wpbn
+    org: "WordPress Meetup Bonn #wpbn"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wordpress-meetup-bonn-wpbn/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-wordpress-meetup-saarland
+    org: WordPress Meetup Saarland
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wordpress-meetup-saarland/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-wp-meetup-dresden
+    org: WordPress Meetup Dresden
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wp-meetup-dresden/events/"
+    region: DE
+    tags: [php]
+    enabled: true
+  - id: meetup-berlin-cyber-security-for-control-systems
+    org: Berlin Cyber Security for Control Systems
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Berlin-Cyber-Security-for-Control-Systems/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-berlin-machine-learning-study-group
+    org: Berlin Machine Learning Study Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Berlin-Machine-Learning-Study-Group/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-frankfurt-cyber-security-for-control-systems
+    org: Frankfurt Cyber Security for Control Systems
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Frankfurt-Cyber-Security-for-Control-Systems/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-hamburg-cyber-security-for-control-systems
+    org: Hamburg Cyber Security for Control Systems
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Hamburg-Cyber-Security-for-Control-Systems/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-linux-user-group-oberhausen-rheinland
+    org: Linux User Group Oberhausen Rheinland
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Linux-User-Group-Oberhausen-Rheinland/events/"
+    region: DE
+    tags: [opensource]
+    enabled: true
+  - id: meetup-munchen-cyber-security-for-control-systems
+    org: München Cyber Security for Control Systems
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/Munchen-Cyber-Security-for-Control-Systems/events/"
+    region: DE
+    tags: [security]
+    enabled: true
+  - id: meetup-ac-muc
+    org: Analytics.Club Munich
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ac-muc/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-advanced-ai-concepts-global-berlin
+    org: Advanced AI Concepts - Global - Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/advanced-ai-concepts-global-berlin/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-advanced-ai-concepts-global-munich
+    org: Advanced AI Concepts - Global - Munich
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/advanced-ai-concepts-global-munich/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-advanced-machine-learning-study-group
+    org: Advanced Machine Learning Study Group (Virtual)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/advanced-machine-learning-study-group/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-and-intelligent-cloud-hamburg
+    org: "Data & AI for Intelligent Cloud Hamburg"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-and-intelligent-cloud-hamburg/events/"
+    region: DE
+    tags: [cloud, ai]
+    enabled: true
+  - id: meetup-ai-performance-engineering-meetup-munich
+    org: AI Performance Engineering Meetup (Munich2)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-performance-engineering-meetup-munich/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-ai-performance-engineering-munich
+    org: AI Performance Engineering Meetup (Munich)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/ai-performance-engineering-munich/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-aiseceng-germany
+    org: AI Security Engineers - Munich, DE
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/aiseceng-germany/events/"
+    region: DE
+    tags: [ai, security]
+    enabled: true
+  - id: meetup-berlin-ai-machine-learning-and-computer-vision-meetup
+    org: Berlin AI Machine Learning and Computer Vision Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/berlin-ai-machine-learning-and-computer-vision-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-berlin-ai-tech-talk
+    org: Berlin AI Developers Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/berlin-ai-tech-talk/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-data-analytics-hamburg-meetup-group
+    org: Data Analytics Hamburg Meetup Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/data-analytics-hamburg-meetup-group/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-datamonster-muensterland
+    org: Data Monsters Münsterland
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/datamonster-muensterland/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-developer-group-ahlen
+    org: Google Developer Group Ahlen
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/developer-group-ahlen/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-expertenkreis-java
+    org: Expertenkreis Java (seit 2008)
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/expertenkreis-java/events/"
+    region: DE
+    tags: [java]
+    enabled: true
+  - id: meetup-frankfurt-genai-for-non-techies
+    org: GenAI for Non-Techies
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/frankfurt-genai-for-non-techies/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-genai-gurus
+    org: GenAI Gurus - Generative Artificial Intelligence
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/genai-gurus/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-global-ai-nuremberg
+    org: Global AI Nuremberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/global-ai-nuremberg/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-it-partner-berlin
+    org: Software. Development. Berlin.
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/it-partner-berlin/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-livetalkshowuberki-deeptech
+    org: "Digital Breakfast: Livetalkshow über KI & Deep Tech"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/livetalkshowuberki-deeptech/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-meetup-group-pnulfhzz
+    org: Never Code Alone
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/meetup-group-PNulFhzz/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-munchen-ai-developers-group
+    org: Munich AI Developers Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/munchen-ai-developers-group/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-munchen-ai-machine-learning-and-computer-vision-meetup
+    org: München AI, Machine Learning and Computer Vision Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/munchen-ai-machine-learning-and-computer-vision-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-my-coding-zone
+    org: My Coding Zone
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/my-coding-zone/events/"
+    region: DE
+    tags: [tech]
+    enabled: true
+  - id: meetup-no-code-meetup
+    org: "No-Code & AI: Building apps, websites, and automations"
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/no-code-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-north-rhine-westphalia-ai-ml-and-computer-vision-meetup
+    org: North Rhine-Westphalia AI, ML and Computer Vision Meetup
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/north-rhine-westphalia-ai-ml-and-computer-vision-meetup/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-platform-engineers-berlin
+    org: Platform Engineers Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/platform-engineers-berlin/events/"
+    region: DE
+    tags: [kubernetes]
+    enabled: true
+  - id: meetup-platform-engineers-munich
+    org: Platform Engineers Munich
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/platform-engineers-munich/events/"
+    region: DE
+    tags: [kubernetes]
+    enabled: true
+  - id: meetup-rust-berlin
+    org: Rust Berlin
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/rust-berlin/events/"
+    region: DE
+    tags: [systems]
+    enabled: true
+  - id: meetup-rust-noris
+    org: Rust Nuremberg
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/rust-noris/events/"
+    region: DE
+    tags: [systems]
+    enabled: true
+  - id: meetup-wids-ahlen
+    org: Women in Data Science Ahlen
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wids-ahlen/events/"
+    region: DE
+    tags: [ai]
+    enabled: true
+  - id: meetup-wiesbaden-python-ai
+    org: Wiesbaden Python AI Group
+    type: html
+    adapter: meetup-group
+    url: "https://www.meetup.com/wiesbaden-python-ai/events/"
+    region: DE
+    tags: [ai, python]
     enabled: true
