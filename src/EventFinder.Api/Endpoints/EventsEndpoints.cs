@@ -18,6 +18,7 @@ public sealed record EventDto(
     double Latitude,
     double Longitude,
     double DistanceKm,
+    LocationPrecision LocationPrecision,
     Attendance Attendance,
     string Url,
     IReadOnlyList<string> Tags);
@@ -90,6 +91,7 @@ public static class EventsEndpoints
         e.Latitude!.Value,
         e.Longitude!.Value,
         Geo.DistanceKm(centerLat, centerLon, e.Latitude!.Value, e.Longitude!.Value),
+        e.LocationPrecision,
         e.Attendance,
         e.Url,
         e.Tags);

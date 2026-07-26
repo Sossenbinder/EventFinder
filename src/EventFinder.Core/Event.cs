@@ -8,6 +8,17 @@ public enum LocationStatus
     Unresolved,
 }
 
+// How precisely LocationStatus.Resolved was pinned down. Lets the UI and the
+// /sources page distinguish a real venue position from a town centroid --
+// the whole point of address-level geocoding (see IngestionRunner's cascade).
+public enum LocationPrecision
+{
+    Address,
+    Street,
+    City,
+    None,
+}
+
 public enum Attendance
 {
     InPerson,
@@ -35,6 +46,7 @@ public sealed class Event
     public double? Latitude { get; set; }
     public double? Longitude { get; set; }
     public LocationStatus LocationStatus { get; set; }
+    public LocationPrecision LocationPrecision { get; set; }
     public Attendance Attendance { get; set; }
     public required string Url { get; set; }
     public IReadOnlyList<string> Tags { get; set; } = [];

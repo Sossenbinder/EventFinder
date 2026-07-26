@@ -4,6 +4,7 @@
     <PackageReference Include="AngleSharp" />
     <PackageReference Include="Ical.Net" />
     <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
     <PackageReference Include="YamlDotNet" />
   </ItemGroup>
 

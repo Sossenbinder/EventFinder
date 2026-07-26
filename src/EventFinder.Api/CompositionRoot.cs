@@ -4,6 +4,7 @@ using EventFinder.Data;
 using EventFinder.Ingestion;
 using EventFinder.Ingestion.Adapters;
 using EventFinder.Ingestion.Contracts;
+using EventFinder.Ingestion.Geocoding;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,8 +37,10 @@ public static class CompositionRoot
         services.AddScoped<EventFinderDbContext>(sp =>
             sp.GetRequiredService<IDbContextFactory<EventFinderDbContext>>().CreateDbContext());
         services.AddScoped<EventStore>();
+        services.AddScoped<GeocodeCacheStore>();
 
         var dataOptions = configuration.GetSection(DataOptions.Section).Get<DataOptions>() ?? new DataOptions();
+        var geocodingOptions = configuration.GetSection(GeocodingOptions.Section).Get<GeocodingOptions>() ?? new GeocodingOptions();
 
         // Gazetteer parses ~70k rows; loaded exactly once here and shared as
         // a singleton so no request (or ingestion run) repeats that I/O.
@@ -49,7 +52,7 @@ public static class CompositionRoot
             return SourceRegistry.Load(dataOptions.SourcesFile, adapterKeys);
         });
 
-        services.AddEventFinderIngestion(Path.Combine(dataOptions.Directory, "fetch-cache"));
+        services.AddEventFinderIngestion(Path.Combine(dataOptions.Directory, "fetch-cache"), geocoding: geocodingOptions);
 
         // AddEventFinderIngestion (EventFinder.Ingestion, workstream 2) registers
         // IngestionRunner as a Singleton that captures EventStore at construction
@@ -66,7 +69,8 @@ public static class CompositionRoot
             sp.GetRequiredService<EventStore>(),
             sp.GetRequiredService<Gazetteer>(),
             Normalization.DefaultKeywordToTag,
-            TimeProvider.System));
+            TimeProvider.System,
+            sp.GetRequiredService<IAddressGeocoder>()));
 
         return services;
     }

@@ -42,6 +42,7 @@ public sealed class EventStore(EventFinderDbContext db)
                     Latitude = incoming.Latitude,
                     Longitude = incoming.Longitude,
                     LocationStatus = incoming.LocationStatus,
+                    LocationPrecision = incoming.LocationPrecision,
                     Attendance = incoming.Attendance,
                     Url = incoming.Url,
                     Tags = incoming.Tags,
@@ -64,6 +65,7 @@ public sealed class EventStore(EventFinderDbContext db)
                 existing.Latitude = incoming.Latitude;
                 existing.Longitude = incoming.Longitude;
                 existing.LocationStatus = incoming.LocationStatus;
+                existing.LocationPrecision = incoming.LocationPrecision;
                 existing.Attendance = incoming.Attendance;
                 existing.Url = incoming.Url;
                 existing.Tags = incoming.Tags;

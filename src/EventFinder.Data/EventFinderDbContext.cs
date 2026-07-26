@@ -12,6 +12,7 @@ public sealed class EventFinderDbContext(DbContextOptions<EventFinderDbContext> 
 
     public DbSet<Event> Events => Set<Event>();
     public DbSet<SourceStatus> SourceStatuses => Set<SourceStatus>();
+    public DbSet<GeocodeCacheEntry> GeocodeCacheEntries => Set<GeocodeCacheEntry>();
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {
@@ -51,6 +52,13 @@ public sealed class EventFinderDbContext(DbContextOptions<EventFinderDbContext> 
         {
             b.HasKey(s => s.SourceId);
             b.Property(s => s.SourceId).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<GeocodeCacheEntry>(b =>
+        {
+            b.HasKey(e => e.Id);
+            b.Property(e => e.Query).IsRequired();
+            b.HasIndex(e => e.Query).IsUnique();
         });
     }
 }

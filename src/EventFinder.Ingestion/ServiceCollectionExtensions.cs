@@ -2,6 +2,7 @@ using EventFinder.Core;
 using EventFinder.Data;
 using EventFinder.Ingestion.Adapters;
 using EventFinder.Ingestion.Contracts;
+using EventFinder.Ingestion.Geocoding;
 using EventFinder.Ingestion.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +14,10 @@ namespace EventFinder.Ingestion;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddEventFinderIngestion(
-        this IServiceCollection services, string conditionalFetchCacheDirectory, PolitenessOptions? politeness = null)
+        this IServiceCollection services,
+        string conditionalFetchCacheDirectory,
+        PolitenessOptions? politeness = null,
+        GeocodingOptions? geocoding = null)
     {
         var options = politeness ?? new PolitenessOptions();
         services.AddSingleton(options);
@@ -36,11 +40,27 @@ public static class ServiceCollectionExtensions
 
         services.AddSingleton<IHtmlEventParser, MeetupGroupHtmlParser>();
 
+        var geocodingOptions = geocoding ?? new GeocodingOptions();
+        services.AddSingleton(geocodingOptions);
+        services.AddHttpClient(GeocodingOptions.HttpClientName, client =>
+        {
+            client.Timeout = geocodingOptions.RequestTimeout;
+            client.DefaultRequestHeaders.UserAgent.ParseAdd(geocodingOptions.UserAgent);
+        });
+        // Scoped, not Singleton: PhotonAddressGeocoder's MaxLookupsPerRun
+        // counter and its 1-request-per-second gate are meant to reset every
+        // ingestion run, and a run is exactly one DI scope (see
+        // IngestionBackgroundService/CliCommands). GeocodeCacheStore is
+        // registered by the API host's CompositionRoot alongside EventStore,
+        // the same way EventStore itself is only referenced, not registered, here.
+        services.AddScoped<IAddressGeocoder, PhotonAddressGeocoder>();
+
         services.AddSingleton<IngestionRunner>(sp => new IngestionRunner(
             sp.GetRequiredService<Dictionary<string, IEventSource>>(),
             sp.GetRequiredService<EventStore>(),
             sp.GetRequiredService<Gazetteer>(),
-            Normalization.DefaultKeywordToTag));
+            Normalization.DefaultKeywordToTag,
+            addressGeocoder: sp.GetRequiredService<IAddressGeocoder>()));
         services.AddSingleton<SourceVerifier>(sp => new SourceVerifier(
             sp.GetRequiredService<Dictionary<string, IEventSource>>()));
 

@@ -1,0 +1,21 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [9.17345, 48.77362] },
+      "properties": {
+        "osm_id": 123456789,
+        "osm_type": "N",
+        "osm_key": "building",
+        "osm_value": "yes",
+        "housenumber": "10",
+        "street": "Marienstraße",
+        "postcode": "70178",
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "country": "Deutschland",
+        "name": "10"
+      }
+    }
+  ]
+}

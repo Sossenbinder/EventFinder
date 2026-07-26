@@ -1,0 +1,20 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [9.183, 48.7758] },
+      "properties": {
+        "osm_id": 987654321,
+        "osm_type": "W",
+        "osm_key": "highway",
+        "osm_value": "residential",
+        "street": "Kronenstraße",
+        "postcode": "70173",
+        "city": "Stuttgart",
+        "state": "Baden-Württemberg",
+        "country": "Deutschland",
+        "name": "Kronenstraße"
+      }
+    }
+  ]
+}
